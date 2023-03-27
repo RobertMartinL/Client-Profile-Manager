@@ -1,0 +1,26 @@
+.headerContainer {
+    background: linear-gradient(10deg, rgb(206, 206, 239), rgb(224, 98, 98), orange);
+}
+
+.welcome {
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding-bottom: 20px;
+}
+

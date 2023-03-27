@@ -1,0 +1,50 @@
+.container {
+    background-color: rgb(255, 255, 255);
+    width: 20%;
+    min-height: 50vh;
+    /* border: 1px solid rgb(206, 206, 239); */
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px 0px rgb(206, 206, 239);
+    margin: 2rem;
+    position: relative;
+}
+
+.companyInfo {
+    padding: 1rem;
+}
+
+.companyInfo h2 {
+    font-size: 1.9rem;
+    color: rgb(120, 109, 109);
+}
+
+.icons {
+    font-size: 4rem;
+    color: rgb(120, 109, 109);
+    width: 100%;
+    text-align: center;
+    padding: 7rem;
+}
+
+.btnContainer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+button {
+    width: 70%;
+    background: linear-gradient(180deg, rgb(2, 207, 2), rgb(20, 85, 20));
+    /* background-color: rgb(28, 251, 28); */
+    color: white;
+    font-size: 1rem;
+    padding: 0.6rem;
+    box-shadow: 1px 1px 2px 0px rgb(135, 227, 134);
+    border: none;
+    border-radius: 0.5rem;
+}
+
+
