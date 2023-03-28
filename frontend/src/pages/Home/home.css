@@ -5,3 +5,7 @@
     display: flex;
     justify-content: center;
 }
+
+.ClientList {
+    width: 35%;
+}
