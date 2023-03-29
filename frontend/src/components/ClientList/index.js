@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect , useState } from 'react'
+import ClientDetails from '../ClientDetails'
 import './clientList.css'
 
 const ClientList = () => {
@@ -7,7 +8,7 @@ const ClientList = () => {
 
   useEffect(() => {
     const fetchClients = async () => {
-      const response = await fetch('http://localhost:4000/api/clients')
+      const response = await fetch('/api/clients')
       const json = await response.json()
 
       if (response.ok) {
@@ -24,7 +25,7 @@ const ClientList = () => {
             Clients
         </h2>
         {clients && clients.map((client) => (
-          <p key={client._id}>{client.name}</p>
+          <ClientDetails key={client._id} client={client} />
         ))}
     </div>
   )

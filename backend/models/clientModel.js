@@ -6,10 +6,6 @@ const clientSchema = new Schema({
         type: String,
         required: true
     },
-    clientSince: {
-        type: String,
-        required: true
-    },
     primaryContact: {
         type: String,
         required: false
@@ -27,9 +23,9 @@ const clientSchema = new Schema({
         required: false
     },
     reminders: {
-        type: Array,
+        type: [String],
         required: true,
-        default: []
+        
     }
 }, {timestamps: true })
 

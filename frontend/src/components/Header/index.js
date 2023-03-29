@@ -7,7 +7,7 @@ const Header = () => {
     <div className='headerContainer'>
         <div className='welcome'>
             <h1>
-                Welcome To OneTrack
+            <Link to="/">Welcome To OneTrack</Link>
             </h1>
             <h2>
                 Your companies organizational guide to success

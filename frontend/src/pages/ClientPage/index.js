@@ -4,7 +4,7 @@ import './clientPage.css'
 
 const ClientPage = () => {
   return (
-    <div className='home'>
+    <div className='clientPage'>
         <ClientList />
     </div>
   )

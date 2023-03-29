@@ -1,7 +1,7 @@
 .ClientList {
     background-color: rgb(255, 255, 255);
-    width: 35%;
-    min-height: 50vh;
+    width: 35vw;
+    /* min-height: 50vh; */
     /* border: 1px solid rgb(206, 206, 239); */
     border-radius: 4px;
     box-shadow: 1px 1px 3px 0px rgb(206, 206, 239);

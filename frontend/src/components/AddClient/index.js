@@ -1,25 +1,35 @@
-import React from 'react'
-import { SiHandshake } from 'react-icons/si'
-import './addClient.css'
+import React from "react";
+import { useEffect , useState } from 'react'
+import { SiHandshake } from "react-icons/si";
+import "./addClient.css";
 
 const AddClient = () => {
-    
-  return (
-    <div className='container'>
-        <div className='companyInfo'>
-            <h2>Robert Martin Landscaping LLC</h2>
-            <div className='icons'>
-                < SiHandshake />
-                <div className='clientLength'>
-                    {/* <p>You have { clientLength } clients</p> */}
-                </div>
-            </div>
-        </div>
-        <div className='btnContainer'>
-            <button>Add New Client</button>
-        </div>
-    </div>
-  )
-}
 
-export default AddClient
+    const [clients, setClients] = useState(null)
+
+  useEffect(() => {
+    const fetchClients = async () => {
+      const response = await fetch('/api/clients')
+      const json = await response.json()
+
+      if (response.ok) {
+        setClients(json)
+      }
+    }
+
+    fetchClients()
+  }, [])
+
+  return (
+    <div className="addClient">
+      <h2>User Business Name</h2>
+      <div className="icon-container">
+        <  SiHandshake />
+        {/* {clients.length} */}
+      </div>
+      <button className="addClientBtn">Add New Client</button>
+    </div>
+  );
+};
+
+export default AddClient;

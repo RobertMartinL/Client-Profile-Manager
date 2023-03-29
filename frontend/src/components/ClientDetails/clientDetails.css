@@ -1,0 +1,14 @@
+.clientName {
+    text-align: center;
+    color: rgb(78, 36, 122);
+}
+
+.clientReminders {
+    background-color: rgb(249, 249, 249);
+    width: 50%;
+}
+
+.clientSince {
+    text-align: center;
+    font-size: 13px;
+}

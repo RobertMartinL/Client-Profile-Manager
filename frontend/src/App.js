@@ -1,4 +1,4 @@
-import { BrowserRouter , Routes , Route } from "react-router-dom";
+import { Routes , Route } from "react-router-dom";
 
 //pages//
 import Home from './pages/Home';
@@ -9,7 +9,7 @@ import UserGuide from "./pages/UserGuide";
 
 //components//
 import Header from "./components/Header";
-import ClientList from "./components/ClientList";
+// import ClientList from "./components/ClientList";
 import Footer from "./components/Footer";
 
 function App() {
