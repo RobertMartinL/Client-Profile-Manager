@@ -2,11 +2,11 @@ import { createContext } from 'react'
 
 export const ClientContext = createContext()
 
-export const ClientsContextProvider = () => {
+export const ClientsContextProvider = ({children}) => {
 
     return (
-        <ClientContext.Provider>
-          
+        <ClientContext.Provider value={{clients: []}}>
+          { children }
         </ClientContext.Provider>
     )
 }

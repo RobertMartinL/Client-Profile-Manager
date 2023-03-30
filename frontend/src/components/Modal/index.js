@@ -40,7 +40,9 @@ export default function Modal({open, onClose}) {
         setBalance('')
         setError(null)
         console.log('new client added', json)
+        onClose()
       }
+      
     }
 
     if (!open) return null
@@ -91,7 +93,7 @@ export default function Modal({open, onClose}) {
     </div> 
     <div className='modalBtns'>
       <button id='submitClientBtn'>Submit</button>
-      <button id='cancelBtn' onClick={onClose}>Cancel</button>
+      <button id='cancelBtn'  onClick={onClose}>Cancel</button>
     </div>
     {error && <div className='error'>{error}</div>}
     </form>

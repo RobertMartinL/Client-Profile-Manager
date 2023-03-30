@@ -20,13 +20,23 @@ const ClientList = () => {
   }, [])
     
   return (
+    //without abc sort
+    // <div className='ClientList'>
+    //     <h2>
+    //         Clients
+    //     </h2>
+    //     {clients && clients.map((client) => (
+    //       <ClientDetails key={client._id} client={client} />
+    //     ))}
+    // </div>
+
+    //with abc sort
     <div className='ClientList'>
-        <h2>
-            Clients
-        </h2>
-        {clients && clients.map((client) => (
-          <ClientDetails key={client._id} client={client} />
-        ))}
+      <h2>Clients</h2>
+      {clients &&
+      clients
+        .sort((a, b) => a.name.localeCompare(b.name)) // sort clients alphabetically by name
+        .map((client) => <ClientDetails key={client._id} client={client} />)}
     </div>
   )
 }

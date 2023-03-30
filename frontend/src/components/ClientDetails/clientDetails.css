@@ -16,3 +16,10 @@
 .clientBody {
     display: flex;
 }
+
+.editIcon {
+    position: absolute;
+    right: 5rem;
+    font-size: 1.4rem;
+    color: grey;
+}
