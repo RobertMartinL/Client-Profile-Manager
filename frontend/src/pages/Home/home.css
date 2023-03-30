@@ -1,9 +1,10 @@
 .home {
-    background-color: yellow;
+    padding: 0 10%;
+    /* background-color: rgb(229, 239, 245); */
     width: 100vw;
     display: flex;
     justify-content: center;
-    border: 2px solid green;
+    /* border: 2px solid green; */
 }
 /* 
 .ClientList {

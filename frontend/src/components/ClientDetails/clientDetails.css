@@ -12,3 +12,7 @@
     text-align: center;
     font-size: 13px;
 }
+
+.clientBody {
+    display: flex;
+}

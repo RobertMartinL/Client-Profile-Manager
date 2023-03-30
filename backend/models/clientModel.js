@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const clientSchema = new Schema({
     name: {
         type: String,
-        required: true
+        required: true,
     },
     primaryContact: {
         type: String,
@@ -20,7 +20,7 @@ const clientSchema = new Schema({
     },
     balance: {
         type: Number,
-        required: false
+        required: true
     },
     reminders: {
         type: [String],

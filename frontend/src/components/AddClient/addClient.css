@@ -4,14 +4,16 @@
     justify-content: space-between;
     height: 70vh;
     width: 25vw;
-    background-color: orange;
+    background-color: rgb(255, 255, 255);
     margin: 2rem;
     padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px 0px rgb(206, 206, 239);
 }
   
 .addClient h2 {
     font-size: 1.8rem;
-}
+    color: rgb(120, 109, 109);}
   
 .icon-container {
     display: flex;
@@ -21,9 +23,22 @@
     font-size: 4.5rem;
 }
 
+.test {
+    text-align: center;
+    color: rgb(120, 109, 109);
+}
+
+.clientLengthMessage {
+    font-size: 16px;
+}
+
 .addClientBtn {
     align-self: center;
     height: 2rem;
     width: 70%;
     font-size: 1rem;
+    background: linear-gradient(rgb(12, 248, 12), rgb(14, 120, 14));
+    border-radius: 5px;
+    border: 1px solid grey;
+    color: white;
 }

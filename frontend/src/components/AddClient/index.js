@@ -1,9 +1,11 @@
 import React from "react";
 import { useEffect , useState } from 'react'
 import { SiHandshake } from "react-icons/si";
+// import ClientForm from "../ClientForm";
+import Modal from '../../components/Modal'
 import "./addClient.css";
 
-const AddClient = () => {
+const AddClient = (displayedClients) => {
 
     const [clients, setClients] = useState(null)
 
@@ -20,15 +22,25 @@ const AddClient = () => {
     fetchClients()
   }, [])
 
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
+    
     <div className="addClient">
       <h2>User Business Name</h2>
       <div className="icon-container">
+        <div className="test">
         <  SiHandshake />
-        {/* {clients.length} */}
+        <div className="clientLengthMessage">
+          {clients && <p>You have {clients.length} clients</p>}
+        </div>
+        </div>
       </div>
-      <button className="addClientBtn">Add New Client</button>
+      <button onClick={() => setIsOpen(true)} className="addClientBtn">Add New Client</button>
+      <Modal open={isOpen} onClose={() => setIsOpen(false)} />
+
     </div>
+    
   );
 };
 

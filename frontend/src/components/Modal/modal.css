@@ -1,0 +1,71 @@
+.where {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.853), rgba(0, 0, 0, 0.81));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addClientH2 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+form {
+    width: 25%;
+    /* height: 30%; */
+    /* position: fixed;
+    top: 40%;
+    left: 25%;
+    translate: (-50%, -50%); */
+    /* background-color: rgb(100, 100, 100); */
+    background: linear-gradient(rgb(120, 145, 160), rgba(99, 99, 99, 0.722));
+    padding: 50px;
+    z-index: 1000;
+    border-radius: 20px 20px 20px 20px;
+    /* display: flex; */
+
+}
+
+form input {
+    /* width: 50%; */
+}
+
+.modalBody {
+    display: grid;
+    margin: 0.5rem;
+    color: white;
+}
+
+.modalBtns {
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-around; */
+    gap: 2rem;
+}
+
+.modalBtns button {
+    padding: 0.2rem 0.5rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: 1px solid grey;
+    color: white;
+}
+
+.error {
+    color: red;
+}
+
+#submitClientBtn {
+    background: linear-gradient(rgb(12, 248, 12), rgb(14, 120, 14));
+}
+
+#cancelBtn {
+    background: linear-gradient(red, rgb(165, 15, 15));
+}
+
