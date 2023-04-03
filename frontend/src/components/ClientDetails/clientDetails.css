@@ -18,8 +18,35 @@
 }
 
 .editIcon {
+    display: none;
+    color: rgb(164, 164, 164);
+}
+
+.deleteIcon {
+    display: none;
+    color: rgb(164, 164, 164);
+}
+
+.clientDetails:hover .editIcon {
+    display: block;
     position: absolute;
     right: 5rem;
     font-size: 1.4rem;
-    color: grey;
+}
+
+.clientDetails:hover .deleteIcon {
+    display: block;
+    position: absolute;
+    right: 2.5rem;
+    font-size: 1.4rem;
+}
+
+.editIcon:hover {
+    color: rgb(79, 72, 72);
+    cursor: pointer;
+}
+
+.deleteIcon:hover {
+    color: rgb(79, 72, 72);
+    cursor: pointer;
 }

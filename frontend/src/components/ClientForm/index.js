@@ -1,96 +1,99 @@
-import React, { useState } from 'react'
-import ReactDom from 'react-dom'
-import './clientForm.css'
+// import React, { useState } from 'react'
+// import ReactDom from 'react-dom'
+// import { useClientsContext } from '../../hooks/useClientsContext'
+// import './clientForm.css'
 
-const ClientForm = ({open, onClose}) => {
-  
-    const [name, setName] = useState('')
-    const [primaryContact, setprimaryContact] = useState('')
-    const [phone, setPhone] = useState('')
-    const [email, setEmail] = useState('')
-    const [balance, setBalance] = useState('')
-    // const [reminders, setReminders] = useState([])
-    const [error, setError] = useState(null)
+// const ClientForm = ({open, onClose}) => {
 
-    const handleSubmit = async (e) => {
-      e.preventDefault()
+//     const { dispatch } = useClientsContext()
+//     const [name, setName] = useState('')
+//     const [primaryContact, setprimaryContact] = useState('')
+//     const [phone, setPhone] = useState('')
+//     const [email, setEmail] = useState('')
+//     const [balance, setBalance] = useState('')
+//     // const [reminders, setReminders] = useState([])
+//     const [error, setError] = useState(null)
 
-      const client = {name, primaryContact, phone, email, balance}
+//     const handleSubmit = async (e) => {
+//       e.preventDefault()
 
-      const response = await fetch('/api/clients', {
-        method: 'POST',
-        body: JSON.stringify(client),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-      const json = await response.json()
+//       const client = {name, primaryContact, phone, email, balance}
 
-      if (!response.ok) {
-        setError(json.error)
-      }
+//       const response = await fetch('/api/clients', {
+//         method: 'POST',
+//         body: JSON.stringify(client),
+//         headers: {
+//           'Content-Type': 'application/json'
+//         }
+//       })
+//       const json = await response.json()
 
-      if (response.ok) {
-        setName('')
-        setprimaryContact('')
-        setPhone('')
-        setEmail('')
-        setBalance('')
-        setError(null)
-        console.log('new client added', json)
-      }
-    }
+//       if (!response.ok) {
+//         setError(json.error)
+//       }
 
-  if (!open) return null
-  return ReactDom.createPortal(
-    <>
-    <form className='create' onSubmit={handleSubmit}>
-      <h3>Add A Client</h3>
+//       if (response.ok) {
+//         setName('')
+//         setprimaryContact('')
+//         setPhone('')
+//         setEmail('')
+//         setBalance('')
+//         setError(null)
+//         dispatch({type: 'CREATE_CLIENT', payload: json})
+//         console.log('new client added', json)
+//       }
+//     }
 
-    <label>Client Name:</label>
-      <input
-        type="text"
-        onChange={(e) => setName(e.target.value)}
-        value={name}
-      />
+//   if (!open) return null
+//   return ReactDom.createPortal(
+//     <>
+//     <form className='create' onSubmit={handleSubmit}>
+//       <h3>Add A Client</h3>
 
-    <label>Primary Contact Name:</label>
-      <input
-        type="text"
-        onChange={(e) => setprimaryContact(e.target.value)}
-        value={primaryContact}
-      />
+//     <label>Client Name:</label>
+//       <input
+//         type="text"
+//         onChange={(e) => setName(e.target.value)}
+//         value={name}
+//       />
 
-    <label>Phone Number:</label>
-      <input
-        type="number"
-        onChange={(e) => setPhone(e.target.value)}
-        value={phone}
-      />
+//     <label>Primary Contact Name:</label>
+//       <input
+//         type="text"
+//         onChange={(e) => setprimaryContact(e.target.value)}
+//         value={primaryContact}
+//       />
 
-    <label>Email:</label>
-      <input
-        type="text"
-        onChange={(e) => setEmail(e.target.value)}
-        value={email}
-      />
+//     <label>Phone Number:</label>
+//       <input
+//         type="number"
+//         onChange={(e) => setPhone(e.target.value)}
+//         value={phone}
+//       />
 
-    <label>Balance:</label>
-      <input
-        type="number"
-        onChange={(e) => setBalance(e.target.value)}
-        value={balance}
-      />
+//     <label>Email:</label>
+//       <input
+//         type="text"
+//         onChange={(e) => setEmail(e.target.value)}
+//         value={email}
+//       />
 
-      <button>Submit</button>
-      {error && <div className='error'>{error}</div>}
-    </form>
+//     <label>Balance:</label>
+//       <input
+//         type="number"
+//         onChange={(e) => setBalance(e.target.value)}
+//         value={balance}
+//       />
 
-    {/* <button onClick={onClose}>close</button> */}
+//       <button>Submit</button>
+//       {error && <div className='error'>{error}</div>}
+//     </form>
 
-    </>,
-    // document.getElementById('portal')
-  )
-}
+//     {/* <button onClick={onClose}>close</button> */}
 
-export default ClientForm
+//     </>,
+//     // document.getElementById('portal')
+//   )
+// }
+
+// export default ClientForm

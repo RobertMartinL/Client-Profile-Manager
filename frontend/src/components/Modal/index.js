@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDom from 'react-dom'
-import { useState } from 'react'
+import { useClientsContext } from '../../hooks/useClientsContext'
 import './modal.css'
 
 export default function Modal({open, onClose}) {
   
-
-  const [name, setName] = useState('')
+    const { dispatch } = useClientsContext()
+    const [name, setName] = useState('')
     const [primaryContact, setprimaryContact] = useState('')
     const [phone, setPhone] = useState('')
     const [email, setEmail] = useState('')
@@ -40,6 +40,7 @@ export default function Modal({open, onClose}) {
         setBalance('')
         setError(null)
         console.log('new client added', json)
+        dispatch({type: 'CREATE_CLIENT', payload: json})
         onClose()
       }
       

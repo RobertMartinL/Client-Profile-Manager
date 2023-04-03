@@ -1,10 +1,11 @@
 import React from 'react'
-import { useEffect , useState } from 'react'
+import { useEffect } from 'react'
 import ClientDetails from '../ClientDetails'
+import { useClientsContext } from '../../hooks/useClientsContext'
 import './clientList.css'
 
 const ClientList = () => {
-  const [clients, setClients] = useState(null)
+  const {clients, dispatch} = useClientsContext()
 
   useEffect(() => {
     const fetchClients = async () => {
@@ -12,7 +13,7 @@ const ClientList = () => {
       const json = await response.json()
 
       if (response.ok) {
-        setClients(json)
+        dispatch({type: 'SET_CLIENTS', payload: json})
       }
     }
 

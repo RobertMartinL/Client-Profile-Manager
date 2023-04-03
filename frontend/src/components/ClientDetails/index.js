@@ -1,5 +1,5 @@
 import React from 'react'
-import { AiFillEdit } from 'react-icons/ai'
+import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
 import './clientDetails.css'
 
 const ClientDetails = ({ client }) => {
@@ -31,6 +31,9 @@ const ClientDetails = ({ client }) => {
           </div>
           <div className='editIcon'>
             < AiFillEdit />
+          </div>
+          <div className='deleteIcon'>
+            < AiFillDelete />
           </div>
         </div>
         <p className='clientSince'>Client since {client.createdAt}</p>

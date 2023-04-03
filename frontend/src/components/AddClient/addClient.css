@@ -41,4 +41,10 @@
     border-radius: 5px;
     border: 1px solid grey;
     color: white;
+    
+}
+
+.addClientBtn:hover {
+    background: linear-gradient(rgb(113, 242, 113), rgb(22, 163, 22));
+    cursor: pointer;
 }
