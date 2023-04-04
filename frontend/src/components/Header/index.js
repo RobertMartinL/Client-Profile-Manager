@@ -16,7 +16,7 @@ const Header = () => {
         <nav>
            <ul>
             <li><Link to="/ClientPage"><p>Clients</p></Link></li>
-            <li><Link to='/Reminders'><p>Reminders</p></Link></li>
+            <li><Link to='/RemindersPage'><p>Reminders</p></Link></li>
             <li><Link to='/Lists'><p>Lists</p></Link></li>
             <li><Link to='/UserGuide'><p>User Guide</p></Link></li>
            </ul>

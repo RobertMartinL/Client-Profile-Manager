@@ -1,8 +1,22 @@
 import React from 'react'
+import { useClientsContext } from '../../hooks/useClientsContext'
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
+import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 import './clientDetails.css'
 
 const ClientDetails = ({ client }) => {
+  const { dispatch } = useClientsContext()
+
+  const handleDelete = async () => {
+    const response = await fetch('/api/clients/' + client._id, {
+      method: 'DELETE'
+    })
+    const json = await response.json()
+
+    if (response.ok) {
+      dispatch({type: 'DELETE_CLIENT', payload: json})
+    }
+  }
 
   return (
     <div className='clientDetails'>
@@ -32,11 +46,11 @@ const ClientDetails = ({ client }) => {
           <div className='editIcon'>
             < AiFillEdit />
           </div>
-          <div className='deleteIcon'>
+          <div className='deleteIcon' onClick={handleDelete}>
             < AiFillDelete />
           </div>
         </div>
-        <p className='clientSince'>Client since {client.createdAt}</p>
+        <p className='clientSince'>Client added {formatDistanceToNow(new Date(client.createdAt), {addSuffix: true})}</p>
     </div>
   )
 }

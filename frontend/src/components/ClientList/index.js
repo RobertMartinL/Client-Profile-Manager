@@ -18,7 +18,7 @@ const ClientList = () => {
     }
 
     fetchClients()
-  }, [])
+  }, [dispatch])
     
   return (
     //without abc sort
